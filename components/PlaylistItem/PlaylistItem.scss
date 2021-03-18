@@ -1,0 +1,87 @@
+.PlaylistItem {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  color: #4E4E4E;
+  border-bottom: 1px solid #f4f2f7;
+  border-radius: 6px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &-Active {
+    background-color: #e2e2ea;
+  }
+
+  &_ThumbAction {
+    display: flex;
+    padding: 10px 20px 10px 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  &_Thumb {
+    width: 105px;
+    height: 63px;
+    background-color: #ccc;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+  }
+
+  &_Details {
+    flex-grow: 1;
+    padding: 10px 10px 10px 0;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &_Title {
+    font-size: 18px;
+    color: #4E4E4E;
+    line-height: 22px;
+  }
+
+  &_Description {
+    font-size: 14px;
+    color: #292929;
+    line-height: 17px;
+  }
+
+	&_Duration {
+    padding: 0 15px;
+		font-size: 14px;
+		color: #B2BBC6;
+    white-space: nowrap;
+	}
+
+  &_Action {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #E8EAEF;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:after {
+      content: "\e8fd";
+      font-family: 'icons', sans-serif;
+    }
+
+    &:hover {
+      background-color: $errorColor;
+    }
+  }
+}
